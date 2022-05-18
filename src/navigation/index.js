@@ -8,23 +8,21 @@ import Home from '../screens/HomeScreen';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
 import 'react-native-gesture-handler';
+import navigationStrings from '../constant/navigationStrings';
 
 const Stack = createStackNavigator();
-
-
 
 const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name='Sign In' component={SignInScreen}/>
-          <Stack.Screen name='Sign Up' component={SignUpScreen}/>
-          <Stack.Screen name='Email' component={ConfirmEmailScreen}/>
-          <Stack.Screen name='ForgetPassword' component={ForgetPasswordScreen}/>
-          <Stack.Screen name='NewPassword' component={NewPasswordScreen}/>
-          <Stack.Screen name='Home' component={Home}/>
+          <Stack.Screen name={navigationStrings.SIGNIN} component={SignInScreen}/>
+          <Stack.Screen name={navigationStrings.SIGNUP} component={SignUpScreen}/>
+          <Stack.Screen name={navigationStrings.EMAIL} component={ConfirmEmailScreen}/>
+          <Stack.Screen name={navigationStrings.FORGETPASSWORD} component={ForgetPasswordScreen}/>
+          <Stack.Screen name={navigationStrings.NEWPASSWORLD} component={NewPasswordScreen}/>
+          <Stack.Screen name={navigationStrings.HOME} component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
